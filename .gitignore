@@ -32,25 +32,9 @@ Todos.iml
 .settings
 hs_err_pid27345.log
 ManageToDoList.iml
+
 #Other system config files
-src/test/.DS_Store
-src/test/java/.DS_Store
-src/.DS_Store
-resources/driver/.DS_Store
-.DS_Store
-resources/.DS_Store
-src/test/java/com/.DS_Store
-src/test/resources/.DS_Store
-.idea/
-.DS_Store
-.DS_Store?
-src/main/java/.DS_Store
-src/.DS_Store
-src/main/java/.DS_Store
-src/main/java/com/.DS_Store
-src/main/java/.DS_Store
-src/main/.DS_Store
-src/main/java/com.DS_Store
+/**/*.DS_Store
 #Output Directory
 /target/
 /test-output/
