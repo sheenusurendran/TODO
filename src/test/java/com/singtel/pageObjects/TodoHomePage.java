@@ -52,10 +52,6 @@ public class TodoHomePage  {
     @CacheLookup
     private WebElement lnk_All;
 
-    @FindBy(xpath = "//*[contains(text(),'items left')]| //*[contains(text(),'item left')]")
-    @CacheLookup
-    private WebElement lbl_itemleft;
-
     @FindBy(xpath = "//button[@class='destroy']")
     @CacheLookup
     private List<WebElement> btn_destroy;
@@ -81,12 +77,6 @@ public class TodoHomePage  {
     private WebElement lnk_selectedCompleted;
 
 
-    public void simpleActions(){
-      Actions action = new Actions(driver) ;
-      action.sendKeys(txt_searchInput,"mynewitem");
-      action.moveToElement(txt_searchInput).build().perform();
-    }
-
     public void navigateToHomePage() throws Exception {
        genericActions.WaitUntilElementVisible(txt_searchInput,driver);
         Assert.assertTrue("MVC user is not navigated to To do home page",txt_searchInput.isDisplayed());
@@ -106,6 +96,7 @@ public class TodoHomePage  {
     }
 
     public Boolean isItemNotVisible(String item) {
+        WaitUntilElementInVisible(item);
         return list_todo.findElements(By.xpath("//label[contains(text(),'" + item + "')]")).size() == 0;
     }
 
@@ -120,7 +111,7 @@ public class TodoHomePage  {
 
     public boolean displayItemLeft_Count(String count) {
         lb_todocount.findElement(By.xpath("//strong[contains(text(),'" + count + "')]"));
-        jse.executeScript("arguments[0].scrollIntoView()", lbl_itemleft);
+        //jse.executeScript("arguments[0].scrollIntoView()", lbl_itemleft);
         return getDynamicElementforCount(count).isDisplayed();
     }
 

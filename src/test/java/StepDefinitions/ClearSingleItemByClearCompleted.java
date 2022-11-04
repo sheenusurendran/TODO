@@ -8,9 +8,6 @@ import org.junit.Assert;
 public class ClearSingleItemByClearCompleted {
     TodoHomePage homepage = new TodoHomePage();
 
-    public ClearSingleItemByClearCompleted() throws Exception {
-    }
-
     @When("^user clicks on \"([^\"]*)\"$")
     public void user_clicks_on(String arg1) throws Throwable {
         homepage.selectSingleItem();

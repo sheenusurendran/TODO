@@ -16,7 +16,6 @@ public class Config {
         try{
             chromeDriver= PropertyFileReader.appConfig.get("chromeDriver").toString().replaceAll("\"","");
             browser= PropertyFileReader.appConfig.get("browser").toString();
-            browser= PropertyFileReader.appConfig.get("browser").toString();
             shortWait= Long.parseLong(PropertyFileReader.appConfig.get("shortWait").toString());
             longWait = Long.parseLong(PropertyFileReader.appConfig.get("longWait").toString());
             //reportPath=PropertyFileReader.appConfig.get("ScreenShotsPath").toString();

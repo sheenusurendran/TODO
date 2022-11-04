@@ -20,7 +20,8 @@ public class Hooks {
         launchURL();
     }
     public void setDriver(){
-    driver= WebDriverManager.returnDriver(Config.browser);
+
+        driver= WebDriverManager.returnDriver(Config.browser);
     }
     public void launchURL(){
         driver.manage().timeouts().implicitlyWait(Config.longWait, TimeUnit.SECONDS);
